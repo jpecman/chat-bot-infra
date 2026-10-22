@@ -48,6 +48,7 @@ services:
     environment:
       <<: *langfuse-env
       NEXTAUTH_SECRET: '${NEXTAUTH_SECRET:?set NEXTAUTH_SECRET in .env}'
+      AUTH_DISABLE_SIGNUP: 'true'
 
   clickhouse:
     image: docker.io/clickhouse/clickhouse-server:25.12
